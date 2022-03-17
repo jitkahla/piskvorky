@@ -10,3 +10,12 @@ html {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.btn {
+  width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 3%;
+}
