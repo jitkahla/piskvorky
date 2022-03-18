@@ -23,8 +23,9 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #283e50;
   color: #ffffff;
+  background-color: #283e50;
+  border-radius: 5px 5px 0 0;
 }
 
 .btn {
@@ -61,4 +62,7 @@ p {
 
 .game-about {
   margin: 5% 0;
+}
+img {
+  border-radius: 5px 5px 0 0;
 }
