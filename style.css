@@ -1,5 +1,19 @@
-html {
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
   text-align: center;
+  background: linear-gradient(#615dad, #ffc8da);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
 }
 .game-intro {
   display: flex;
@@ -9,13 +23,42 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.btn {
-  width: 100%;
+  background-color: #283e50;
+  color: #ffffff;
 }
 
 .btn {
   text-decoration: none;
+  width: 100%;
   padding: 3%;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: 'Lobster', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.rules {
+  background-color: #1fcca4;
+}
+
+.start {
+  background-color: #0197f6;
+}
+
+.rules:hover {
+  background-color: #1cbb96;
+}
+.start:hover {
+  background-color: #0090e9;
+}
+
+p {
+  padding: 5% 5%;
+}
+
+.game-about {
+  margin: 5% 0;
 }
