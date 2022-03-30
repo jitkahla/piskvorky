@@ -14,7 +14,7 @@ body {
   font-size: 13px;
   line-height: 1.5;
 }
-.game-intro {
+.container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -37,6 +37,7 @@ h1 {
   font-family: 'Lobster', sans-serif;
   font-size: 36px;
   font-weight: normal;
+  padding: 0.5em 0 0.3em;
 }
 
 .rules {
@@ -55,12 +56,25 @@ h1 {
 }
 
 p {
-  padding: 5% 5%;
+  padding: 0 1em 2em;
 }
 
-.game-about {
-  margin: 5% 0;
-}
-img {
+.container > img {
   border-radius: 5px 5px 0 0;
+}
+
+ol {
+  text-align: left;
+  padding: 1em 3em 1em 5em;
+}
+.instructions {
+  padding: 2em;
+}
+
+figure > img {
+  width: 100%;
+}
+figcaption {
+  font-style: italic;
+  padding-bottom: 3em;
 }
