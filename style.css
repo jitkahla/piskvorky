@@ -40,7 +40,8 @@ h1 {
   padding: 0.5em 0 0.3em;
 }
 
-.rules {
+.rules,
+.index {
   background-color: #1fcca4;
 }
 
@@ -48,7 +49,8 @@ h1 {
   background-color: #0197f6;
 }
 
-.rules:hover {
+.rules:hover,
+.index:hover {
   background-color: #1cbb96;
 }
 .start:hover {
@@ -65,10 +67,11 @@ p {
 
 ol {
   text-align: left;
-  padding: 1em 3em 1em 5em;
+  padding: 1em 3em 0 5em;
 }
+
 .instructions {
-  padding: 2em;
+  padding: 2em 2em 0 2em;
 }
 
 figure > img {
@@ -77,4 +80,11 @@ figure > img {
 figcaption {
   font-style: italic;
   padding-bottom: 3em;
+}
+.icon {
+  width: 1em;
+  filter: invert(100%);
+}
+li {
+  padding-bottom: 1em;
 }
