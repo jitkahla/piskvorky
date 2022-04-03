@@ -11,20 +11,21 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .container {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 300px;
+  width: 350px;
   left: 50%;
   top: 10%;
   transform: translate(-50%);
   color: #ffffff;
   background-color: #283e50;
   border-radius: 5px 5px 0 0;
+  overflow: hidden;
 }
 
 .btn {
@@ -61,25 +62,19 @@ p {
   padding: 0 1em 2em;
 }
 
-.container > img {
-  border-radius: 5px 5px 0 0;
-}
-
 ol {
   text-align: left;
-  padding: 1em 3em 0 5em;
+  font-size: 15px;
+  padding: 1em 3em 0 4em;
 }
 
 .instructions {
-  padding: 2em 2em 0 2em;
+  padding: 1em;
 }
 
-figure > img {
-  width: 100%;
-}
 figcaption {
   font-style: italic;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 .icon {
   width: 1em;
@@ -87,4 +82,29 @@ figcaption {
 }
 li {
   padding-bottom: 1em;
+}
+img {
+  width: 100%;
+}
+.container.game-intro {
+  width: 350px;
+}
+figure {
+  padding: 1em;
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 630px;
+  }
+  .instructions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  figure {
+    flex: 1 1 50%;
+  }
+  figcaption {
+    font-size: 13px;
+  }
 }
