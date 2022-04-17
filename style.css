@@ -103,14 +103,11 @@ figure {
 .game {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  transform: translate(-50%);
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   max-width: 80vmin;
-  left: 50%;
-  top: 10%;
+  margin: auto;
   line-height: 1;
 }
 .controls {
