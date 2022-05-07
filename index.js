@@ -9,18 +9,22 @@ const playsCz = (plays) => {
     return 'křížek';
   }
 };
+// fce zobrazující confirm, pokud se potvrdí, načte se nová hra, pokud ne, zůstane dohraná hra a políčka se znepřístupní, aby nešlo ve hře pokračovat
+const winConfirm = () => {
+  if (confirm(`Vyhrává ${playsCz(plays)}! Spustit novou hru?`)) {
+    location.reload();
+  } else buttons.forEach((button) => (button.disabled = true));
+};
 
 //funkce co vyplní políčko po kliknutí kolečkem pomocí třídy, znepřístupní ho a zařídí, aby se dostal na řadu křížek nebo naopak, mění se img src a alt
 const blockFill = (event) => {
   event.target.classList.add(`field-${plays}`);
   event.target.disabled = true;
 
-  //volám fci, kontrolující výherní tah, pokud vrátí true a potvrdí se confirm, spustí se nová hra
-  if (
-    winCheck(event.target) &&
-    confirm(`Vyhrává ${playsCz(plays)}! Spustit novou hru?`)
-  ) {
-    location.reload();
+  //volám fci, kontrolující výherní tah, pokud vrátí true, zavolám fci winConfirm se zpožděním, aby se nejdřív vykreslil symbol a pak zobrazil confirm
+
+  if (winCheck(event.target)) {
+    setTimeout(winConfirm, 500);
   }
 
   if (plays === 'circle') {
