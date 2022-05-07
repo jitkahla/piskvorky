@@ -25,15 +25,15 @@ const blockFill = (event) => {
 
   if (winCheck(event.target)) {
     setTimeout(winConfirm, 500);
-  }
-
-  if (plays === 'circle') {
-    plays = 'cross';
   } else {
-    plays = 'circle';
+    if (plays === 'circle') {
+      plays = 'cross';
+    } else {
+      plays = 'circle';
+    }
+    playsImg.src = `images/${plays}.svg`;
+    playsImg.alt = playsCz(plays);
   }
-  playsImg.src = `images/${plays}.svg`;
-  playsImg.alt = playsCz(plays);
 };
 
 //vybírám všechny buttony v hracím poli a přidávám na ně eventlistener, který kliknutím spustí fci výše
